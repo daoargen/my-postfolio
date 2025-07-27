@@ -95,10 +95,38 @@ export default function Contact(): React.JSX.Element {
                   <MapPin className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                   <span className="text-gray-700 dark:text-gray-300">Khu Công nghệ cao, Q.9, Thành phố Thủ Đức, TP.HCM, Vietnam</span>
                 </div>
+                {/* Facebook */}
+                <div className="flex items-center space-x-3">
+                  {/* Facebook icon SVG */}
+                  <svg className="h-5 w-5 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/></svg>
+                  <a 
+                    href="https://www.facebook.com/levandao0802"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    Facebook
+                  </a>
+                </div>
+                {/* Messenger */}
+                <div className="flex items-center space-x-3">
+                  {/* Messenger icon SVG */}
+                  <svg className="h-5 w-5 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.013 2 11.09c0 2.63 1.07 4.99 2.86 6.74V22l2.62-1.44c1.3.36 2.68.56 4.12.56 5.523 0 10-4.013 10-9.09S17.523 2 12 2zm.13 13.08l-2.19-2.34-4.07 2.34 5.13-5.66 2.19 2.34 4.07-2.34-5.13 5.66z"/></svg>
+                  <a 
+                    href="https://m.me/levandao0802"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    Messenger
+                  </a>
+                </div>
               </CardContent>
             </Card>
+          </div>
 
-            {/* Google Maps */}
+          {/* Google Maps moved to the right column */}
+          <div className="space-y-6">
             <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 overflow-hidden">
               <CardContent className="p-0">
                 <iframe
@@ -114,77 +142,6 @@ export default function Contact(): React.JSX.Element {
               </CardContent>
             </Card>
           </div>
-
-          <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
-            <CardHeader>
-              <CardTitle className="text-xl font-bold text-gray-900 dark:text-white">Send me a message</CardTitle>
-              <CardDescription className="text-gray-600 dark:text-gray-400">
-                Fill out the form below and I&apos;ll get back to you as soon as possible
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="text-gray-700 dark:text-gray-300">
-                    Name
-                  </Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-gray-700 dark:text-gray-300">
-                    Email
-                  </Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="message" className="text-gray-700 dark:text-gray-300">
-                    Message
-                  </Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={4}
-                    required
-                    className="border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-                    placeholder="Your message here..."
-                  />
-                </div>
-                <Button 
-                  type="submit" 
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Sending...
-                    </>
-                  ) : (
-                    'Send Message'
-                  )}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </div>

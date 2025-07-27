@@ -122,7 +122,7 @@ export default function About() {
                       size="icon"
                       variant="outline"
                       className="bg-white/50 dark:bg-gray-700/50 hover:bg-[#4267B2]/20 dark:hover:bg-[#4267B2]/30"
-                      onClick={() => window.open("https://facebook.com/daolevan.me", "_blank")}
+                      onClick={() => window.open("https://www.facebook.com/levandao0802", "_blank")}
                     >
                       <svg className="w-4 h-4" stroke="currentColor" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z" />
@@ -132,7 +132,7 @@ export default function About() {
                       size="icon"
                       variant="outline"
                       className="bg-white/50 dark:bg-gray-700/50 hover:bg-[#0084FF]/20 dark:hover:bg-[#0084FF]/30"
-                      onClick={() => window.open("https://m.me/daolevan.me", "_blank")}
+                      onClick={() => window.open("https://m.me/levandao0802", "_blank")}
                     >
                       <svg className="w-4 h-4" stroke="currentColor" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2C6.486 2 2 6.262 2 11.5c0 2.545 1.088 4.988 3 6.772v4.228l4.135-2.525c.912.25 1.878.395 2.865.395 5.514 0 10-4.262 10-9.5S17.514 2 12 2zm1.003 12.485l-2.775-2.94-5.227 2.94 5.732-6.09 2.775 2.94 5.227-2.94-5.732 6.09z" />
