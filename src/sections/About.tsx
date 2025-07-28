@@ -80,7 +80,7 @@ export default function About() {
                 </div>
 
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Dao Le Van</h3>
-                <p className="text-blue-600 dark:text-blue-400 font-medium mb-4">Fresher Front-end Developer</p>
+                <p className="text-blue-600 dark:text-blue-400 font-medium mb-4">Fresher Developer</p>
 
                 <div className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
                   <div className="flex items-center justify-center">
@@ -173,14 +173,10 @@ export default function About() {
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Hello there! 👋</h3>
                   <div className="prose prose-lg dark:prose-invert max-w-none">
                     <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                      I'm a passionate and motivated fresher front-end developer with a solid foundation in modern web
-                      technologies. Currently pursuing my Bachelor's degree in Software Engineering at FPT University,
-                      I've gained hands-on experience through internships and real-world projects.
+                      I'm a passionate and motivated fresher developer with a solid foundation in both frontend and backend technologies. Currently pursuing my Bachelor's degree in Software Engineering at FPT University, I've gained hands-on experience through internships and real-world projects.
                     </p>
                     <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                      My journey in tech started with curiosity and has evolved into a genuine passion for creating
-                      beautiful, functional, and user-friendly web applications. I enjoy the problem-solving aspect of
-                      development and the satisfaction of bringing ideas to life through code.
+                      My journey in tech started with curiosity and has evolved into a genuine passion for building robust, scalable, and user-friendly web applications. I enjoy solving complex problems and bringing ideas to life through code, whether it's crafting seamless user interfaces or designing efficient backend systems.
                     </p>
                   </div>
 
@@ -191,10 +187,11 @@ export default function About() {
                         What I Do
                       </h4>
                       <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                        <li>• Responsive Web Development</li>
-                        <li>• React.js & Next.js Applications</li>
+                        <li>• Full Stack Web Development (Frontend & Backend)</li>
+                        <li>• React.js, Next.js & Node.js Applications</li>
+                        <li>• RESTful API & Database Design</li>
                         <li>• UI/UX Implementation</li>
-                        <li>• Mobile App Development (React Native)</li>
+                        <li>• Responsive and Mobile-First Design</li>
                       </ul>
                     </div>
                     <div>
@@ -204,9 +201,9 @@ export default function About() {
                       </h4>
                       <ul className="space-y-2 text-gray-600 dark:text-gray-400">
                         <li>• Join a professional development team</li>
-                        <li>• Master advanced React patterns</li>
+                        <li>• Master advanced full stack patterns</li>
                         <li>• Contribute to open-source projects</li>
-                        <li>• Build impactful web applications</li>
+                        <li>• Build impactful and scalable web applications</li>
                       </ul>
                     </div>
                   </div>
