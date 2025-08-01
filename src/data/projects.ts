@@ -44,7 +44,7 @@ export const projectsData: Project[] = [
     image: "/postfolio.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Framer Motion"],
     githubUrl: "https://github.com/daoargen",
-    liveUrl: "https://my-postfolio-olive.vercel.app/",
+    liveUrl: "https://daolevancv.vercel.app/",
     company: "Personal Project",
     duration: "07/2025 – 07/2025",
     teamSize: "1 member"
