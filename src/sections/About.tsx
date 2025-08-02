@@ -4,17 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import {
-  Download,
-  Github,
-  Mail,
-  MapPin,
-  Calendar,
-  GraduationCap,
-  Phone,
-  CheckCircle,
-  Target,
-} from "lucide-react"
+import { Download, Github, Mail, MapPin, GraduationCap, Phone, CheckCircle, Target } from "lucide-react"
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false)
@@ -35,10 +25,6 @@ export default function About() {
 
     return () => observer.disconnect()
   }, [])
-
-  const tabs = [
-    { id: "overview", label: "Overview", icon: <User className="w-4 h-4" /> },
-  ]
 
   return (
     <section
@@ -74,9 +60,16 @@ export default function About() {
             {/* Profile Card */}
             <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-0 shadow-xl">
               <CardContent className="p-8 text-center">
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 mb-6">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2"></div>
-                  <span className="text-sm font-medium">Available for opportunities</span>
+                {/* Avatar Image - Oval */}
+                <div className="flex justify-center mb-4">
+                  <Image
+                    src="/avatar.jpg"
+                    alt="Avatar"
+                    width={120}
+                    height={160}
+                    className="object-cover border-4 border-white dark:border-gray-700 shadow-lg w-28 h-40 rounded-full"
+                    priority
+                  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Dao Le Van</h3>
@@ -90,9 +83,10 @@ export default function About() {
                   <div className="flex items-center justify-center">
                     <GraduationCap className="w-4 h-4 mr-2" />
                     FPT University Student
-                  </div>        
+                  </div>
+
                   <div className="text-sm text-gray-600 dark:text-gray-400 flex flex-col gap-2">
-                    <a 
+                    <a
                       href="mailto:daolevan089@gmail.com"
                       className="flex items-center justify-center hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     >
@@ -108,7 +102,6 @@ export default function About() {
 
                 {/* Social Links */}
                 <div className="flex flex-col gap-4 mt-6">
-                  
                   <div className="flex justify-center space-x-3">
                     <Button
                       size="icon"
@@ -124,7 +117,13 @@ export default function About() {
                       className="bg-white/50 dark:bg-gray-700/50 hover:bg-[#4267B2]/20 dark:hover:bg-[#4267B2]/30"
                       onClick={() => window.open("https://www.facebook.com/levandao0802", "_blank")}
                     >
-                      <svg className="w-4 h-4" stroke="currentColor" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <svg
+                        className="w-4 h-4"
+                        stroke="currentColor"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
                         <path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z" />
                       </svg>
                     </Button>
@@ -134,7 +133,13 @@ export default function About() {
                       className="bg-white/50 dark:bg-gray-700/50 hover:bg-[#0084FF]/20 dark:hover:bg-[#0084FF]/30"
                       onClick={() => window.open("https://m.me/levandao0802", "_blank")}
                     >
-                      <svg className="w-4 h-4" stroke="currentColor" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <svg
+                        className="w-4 h-4"
+                        stroke="currentColor"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
                         <path d="M12 2C6.486 2 2 6.262 2 11.5c0 2.545 1.088 4.988 3 6.772v4.228l4.135-2.525c.912.25 1.878.395 2.865.395 5.514 0 10-4.262 10-9.5S17.514 2 12 2zm1.003 12.485l-2.775-2.94-5.227 2.94 5.732-6.09 2.775 2.94 5.227-2.94-5.732 6.09z" />
                       </svg>
                     </Button>
@@ -145,20 +150,12 @@ export default function About() {
 
             {/* Action Buttons */}
             <div className="space-y-3">
-              <Button 
+              <Button
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg"
-                onClick={() => window.open('/assets/cv.pdf', '_blank')}
+                onClick={() => window.open("/assets/cv.pdf", "_blank")}
               >
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
-              </Button>
-              <Button
-                variant="outline"
-                className="w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm"
-                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              >
-                <Mail className="mr-2 h-4 w-4" />
-                Get In Touch
               </Button>
             </div>
           </div>
@@ -173,10 +170,15 @@ export default function About() {
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Hello there! 👋</h3>
                   <div className="prose prose-lg dark:prose-invert max-w-none">
                     <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                      I'm a passionate and motivated fresher developer with a solid foundation in both frontend and backend technologies. Currently pursuing my Bachelor's degree in Software Engineering at FPT University, I've gained hands-on experience through internships and real-world projects.
+                      I'm a passionate and motivated fresher developer with a solid foundation in both frontend and
+                      backend technologies. Currently pursuing my Bachelor's degree in Software Engineering at FPT
+                      University, I've gained hands-on experience through internships and real-world projects.
                     </p>
                     <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                      My journey in tech started with curiosity and has evolved into a genuine passion for building robust, scalable, and user-friendly web applications. I enjoy solving complex problems and bringing ideas to life through code, whether it's crafting seamless user interfaces or designing efficient backend systems.
+                      My journey in tech started with curiosity and has evolved into a genuine passion for building
+                      robust, scalable, and user-friendly web applications. I enjoy solving complex problems and
+                      bringing ideas to life through code, whether it's crafting seamless user interfaces or designing
+                      efficient backend systems.
                     </p>
                   </div>
 
@@ -214,18 +216,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  )
-}
-
-function User({ className }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-      />
-    </svg>
   )
 }
